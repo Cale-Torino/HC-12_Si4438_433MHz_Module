@@ -1,66 +1,12 @@
 # HC-12 Si4438 433MHz Module
 
-HC-12_Si4438_433MHz_Module
+The HC-12 has a great range for 433MHz but the downside is that the module can only communicate with another HC-12. Also the price for these modules are very similar to ESP8266 and LoRa devices at least here in South Africa.
 
-AT-Commands
-```C++
-// See SoftwareSerial example 
-// https://www.arduino.cc/en/tutorial/SoftwareSerialExample
+Unless you need a really long range I would choose WiFi simply because of the scaleability and compatibility with multiple WiFi devices. For other 433MHz solutions, LoRa modules are cheaper and way more common with pretty much the same if not better long range functionality.
 
-#include <SoftwareSerial.h>;
-#define RX 2 //Connect to the TX pin of the HC-12
-#define TX 3 //Connect to the RX pin of the HC-12
-SoftwareSerial mySerial(RX, TX);
+That being said these HC-12 modules are very easy to use as data is sent via serial. Zero libraries are needed and almost any MCU can communicate via serial these days. Still this feature also acts as a double edged sword since customizability is very limited.
 
-void setup() {
-  Serial.begin(9600);
-  mySerial.begin(9600);
-
-}
-
-void loop() { // run over and over
-  if (mySerial.available()) {
-    Serial.write(mySerial.read());
-  }
-  if (Serial.available()) {
-    mySerial.write(Serial.read());
-  }
-}
-```
-
-RX
-```C++
-void setup() {
-    Serial.begin(9600);
-    pinMode(LED_BUILTIN, OUTPUT);
-}
-
-void loop() {
-    if(Serial.available() > 0)
-    {
-        String input = Serial.readString();
-        if(input == "Hello World")
-        {
-            digitalWrite(LED_BUILTIN, HIGH);
-            delay(500);
-            digitalWrite(LED_BUILTIN, LOW);
-        }
-    }
-
-}
-```
-
-TX
-```C++
-void setup() {
-  Serial.begin(9600);
-}
-
-void loop() {
-  Serial.print("Hello World");
-  delay(2000);
-}
-```
+So overall there's a few tradeoffs but for one time solutions or for learning purposes it's a great module.
 
 Links
 - [Si4438 Chip](https://www.silabs.com/wireless/proprietary/ezradiopro-sub-ghz-ics/device.si4438)
