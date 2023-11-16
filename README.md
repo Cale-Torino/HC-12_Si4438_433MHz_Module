@@ -1,5 +1,7 @@
 # HC-12 Si4438 433MHz Module
 
+[<img src="img/IMG_4949.JPG" width="500"/>](img/IMG_4949.JPG)
+
 The HC-12 has a great range for 433MHz but the downside is that the module can only communicate with another HC-12. Also the price for these modules are very similar to ESP8266 and LoRa devices at least here in South Africa.
 
 Unless you need a really long range I would choose WiFi simply because of the scaleability and compatibility with multiple WiFi devices. For other 433MHz solutions, LoRa modules are cheaper and way more common with pretty much the same if not better long range functionality.
