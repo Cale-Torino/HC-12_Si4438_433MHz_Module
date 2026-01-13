@@ -1,0 +1,30 @@
+new release for B1
+01/26/2010	ver1.4r changes:
+this firmware version base on the V2 ver1.3r firmware
+- support only B1 revision
+- power supply setting 
+- before initialization wait for the POR and chip ready INT 
+- new answer for the 'i' command
+
+
+
+old releases for V2
+---------------------------------------------------------------------------------
+09/07/2009	ver1.3r changes:
+- the frequency programming -after startup- was unreliable
+
+---------------------------------------------------------------------------------
+06/11/2009	ver1.2r changes:
+- optimized modem parameters
+- LED blinks for longer time for better visibility
+- deviation register used as AFC limit register
+- delay for POR added
+
+---------------------------------------------------------------------------------
+11/02/2009	ver1.1r changes:
+Optimized modem parameters
+Add HW revision information
+
+---------------------------------------------------------------------------------
+25/11/2008	ver1.0r changes:
+Initial release
